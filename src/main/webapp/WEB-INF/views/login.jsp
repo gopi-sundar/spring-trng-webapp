@@ -3,6 +3,7 @@
 <title>Yahoo!!</title>
 </head>
 <body>
-My First JSP!!!
+# this is called expression language (EL)
+My First JSP!!! ${name}
 </body>
 </html>
