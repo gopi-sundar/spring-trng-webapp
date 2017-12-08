@@ -3,7 +3,8 @@
 <title>Yahoo!!</title>
 </head>
 <body>
-# this is called expression language (EL)
-My First JSP!!! ${name}
+	<form action="/login.do" method="POST">
+		Name : <input name="name" type="text" /> <input type="submit" />
+	</form>
 </body>
 </html>
