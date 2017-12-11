@@ -1,4 +1,4 @@
-package webapp;
+package com.arizon.jee;
 
 import java.io.IOException;
 
