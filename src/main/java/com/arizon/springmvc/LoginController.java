@@ -1,23 +1,22 @@
 package com.arizon.springmvc;
 
-import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
-
-	private static Logger logger = Logger.getLogger(LoginController.class);
-
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String showLoginPage() {
-
-		logger.trace("Inside showLoginPage ");
-		logger.debug("Inside showLoginPage ");
-		logger.info("Inside showLoginPage ");
-		logger.warn("Inside showLoginPage ");
-		logger.error("Inside showLoginPage ");
 		return "login";
+	}
+
+	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	public String handleUserLogin(ModelMap model, @RequestParam String name, @RequestParam String password) {
+		model.put("name", name);
+		model.put("password", password);
+		return "welcome";
 	}
 }
